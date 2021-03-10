@@ -3,7 +3,6 @@ const sliderInit = 0;
 const sliderHeight = 40;
 
 const rollKeyWord = function() {
-    console.log("AA")
     fetch('http://zelord.tk/api/rollkeyword')
         .then(function(response) {
             return response.json()
