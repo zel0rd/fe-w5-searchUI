@@ -13,19 +13,21 @@ const popup = function (){
     })
     
     container.addEventListener("mouseover", function(){
+        clearTimeout(hiddenSetTime);
         container.style.visibility = "visible";
+        
     })
     
     container.addEventListener("mouseout", function(){
         hiddenSetTime = setTimeout( () => container.style.visibility = "hidden", 500);
     })
     
-    document.addEventListener("mousemove", function( {target} ){
-        if(target.className === "popupImg"){
-            clearTimeout(hiddenSetTime);
-            container.style.visibility = "visible";
-        }
-    })
+    // container.addEventListener("mousemove", function( {target} ){
+    //     if(target.className === "popupImg"){
+    //         clearTimeout(hiddenSetTime);
+    //         container.style.visibility = "visible";
+    //     }
+    // })
 }
 
 export { popup }
